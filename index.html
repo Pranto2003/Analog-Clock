@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analog Clock</title>
+  </head>
+  <style>
+    .container {
+      width: 600px;
+      height: 600px;
+      display: flex;
+      position: relative;
+      margin: auto;
+    }
+    .container img {
+      width: 600px;
+      height: 600px;
+      display: flex;
+    }
+    #hour,
+    #minitue,
+    #second {
+      position: absolute;
+      background-color: black;
+      border-radius: 10px;
+      transform-origin: bottom;
+    }
+    #hour {
+      width: 2.6%;
+      height: 24%;
+      left: 48.57%;
+      top: 26%;
+    }
+    #minitue {
+      width: 2.6%;
+      height: 30%;
+      left: 48.57%;
+      top: 20%;
+    }
+    #second {
+      width: 2.6%;
+      height: 35%;
+      top: 16%;
+      left: 48.57%;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <img src="Pictures/clock.png" alt="" />
+      <div id="hour"></div>
+      <div id="minitue"></div>
+      <div id="second"></div>
+    </div>
+  </body>
+  <script>
+    setInterval(() => {
+      let date = new Date();
+      let h = date.getHours();
+      let m = date.getMinutes();
+      let s = date.getSeconds();
+      hrotation = 30 * h + m / 2;
+      mrotation = 6 * m;
+      srotation = 6 * s;
+
+      document.getElementById(
+        "hour"
+      ).style.transform = `rotate(${hrotation}deg)`;
+      document.getElementById(
+        "minitue"
+      ).style.transform = `rotate(${mrotation}deg)`;
+      document.getElementById(
+        "second"
+      ).style.transform = `rotate(${srotation}deg)`;
+    }, 1000);
+  </script>
+</html>
