@@ -1,0 +1,39 @@
+.container {
+  width: 600px;
+  height: 600px;
+  display: flex;
+  position: relative;
+  margin: auto;
+}
+.container img {
+  width: 600px;
+  height: 600px;
+  display: flex;
+}
+#hour,
+#minitue,
+#second {
+  position: absolute;
+  background-color: black;
+  border-radius: 10px;
+  transform-origin: bottom;
+  opacity: 0.8;
+}
+#hour {
+  width: 2.6%;
+  height: 24%;
+  left: 48.57%;
+  top: 26%;
+}
+#minitue {
+  width: 2.6%;
+  height: 30%;
+  left: 48.57%;
+  top: 20%;
+}
+#second {
+  width: 2.6%;
+  height: 35%;
+  top: 16%;
+  left: 48.57%;
+}
